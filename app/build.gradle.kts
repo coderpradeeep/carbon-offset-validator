@@ -59,12 +59,11 @@ dependencies {
 
     implementation("androidx.compose.material:material-icons-extended:$2.8.9")
 
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     implementation("androidx.navigation:navigation-compose:$2.8.9")
     implementation("androidx.compose.material:material:1.8.0")
-    // splash screen
-    implementation("androidx.core:core-splashscreen:1.0.0")
 
     // coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
@@ -77,4 +76,12 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.7.8")
     implementation("androidx.compose.material3:material3:1.3.1")
     implementation("androidx.compose.runtime:runtime-livedata:1.7.8")
+
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.google.code.gson:gson:2.9.0")
+
+    // retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.7.2")
+    implementation("com.squareup.retrofit2:converter-gson:2.7.2")
+    implementation("com.squareup.okhttp3:okhttp:3.6.0")
 }
