@@ -6,7 +6,7 @@ import retrofit2.http.POST
 
 interface TodoApi {
 
-    @POST("/predict")
+    @POST("/process-report")
     suspend fun predict(@Body data : Uri) : String
 
 }
