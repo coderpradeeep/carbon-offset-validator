@@ -3,7 +3,7 @@ package Retrofit
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private val BASE_URL = "https://ezloan-ai-model.onrender.com"
+private val BASE_URL = "https://carbon-offset-validator-api.onrender.com"
 
 object RetrofitInstance {
 
