@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.carbonoffsetvalidator.ui.theme.Orange
+import com.example.carbonoffsetvalidator.ui.theme.conclusion
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -78,11 +79,11 @@ fun Resultpage(
                             .padding(PaddingValues(24.dp))
                     ) {
                         Text(
-                            text = "Analyzed Carbon Offset :\n${viewModel.offsetData}",
-                            fontSize = 20.sp,
+                            text = "Analyzed Carbon Offset :\n${conclusion}",
+                            fontSize = 16.sp,
                             fontWeight = FontWeight.W500,
                             letterSpacing = 0.sp,
-                            textAlign = TextAlign.Center,
+                            textAlign = TextAlign.Start,
                             modifier = Modifier
                                 .padding(PaddingValues(16.dp))
                         )

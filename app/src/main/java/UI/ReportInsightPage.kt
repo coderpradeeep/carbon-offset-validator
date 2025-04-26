@@ -54,7 +54,9 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.example.carbonoffsetvalidator.ui.theme.Orange
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -133,10 +135,16 @@ fun ReportInsightPage(
                         onClick = {
                             viewModel.viewModelScope.launch {
                                 viewModel.getPrediction(viewModel.fileUri)
-                            }
-                            if(viewModel.result.value != null) {
+
+                                val delay = (3000..8000).random().toLong()
+
+                                delay(delay)
+                                viewModel.isLoading = false
                                 navController.navigate("result")
                             }
+//                            if(viewModel.result.value != null) {
+//                                navController.navigate("result")
+//                            }
                         },
                         modifier = Modifier
                             .wrapContentSize()
@@ -170,7 +178,6 @@ fun ReportInsightPage(
                     CircularProgressIndicator(
                         color = Orange,
                         strokeWidth = 5.dp,
-                        trackColor = Color.Gray.copy(alpha = 0.2f)
                     )
                 }
             }
